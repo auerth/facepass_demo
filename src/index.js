@@ -60,8 +60,8 @@ app.post('/device/access/valid', authenticate, (req, res) => {
   const isValid = voucherType === 1 && voucher === 'TicketQRcodeContent';
 
 
-  const person = "" //Name of the person who owns the ticket
-  const ticketDescription = ""; //Ticket description 
+  const person = "Demo Client" //Name of the person who owns the ticket
+  const ticketDescription = "Demo Ticket Type"; //Ticket description 
   const personCount = 1; // Number of people who can pass through the gate for the tickettype
 
   //vid and sid should be saved so that they can be associated with a ticket in the process /device/access/report
