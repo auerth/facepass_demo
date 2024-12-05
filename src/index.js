@@ -22,8 +22,8 @@ function authenticate(req, res, next) {
     return res.status(401).json({ code: -1, msg: 'Authentication parameters missing' });
   }
   //This part must dynamically read the secretkey during authentication using the appid transferred
-  const AppId = '75937e2e-9d6e-4927-b9c1-846423e10d06'; // Application ID for connecting to the AP, generator by event creating
-  const SecretKey = '682dbceb21389a5417f50e17e16dfdf2'; // Secret Key for generating the signature, for an event - generate by event creating and search by Application ID
+  const AppId = 'evnt12345abcd'; // Application ID for connecting to the AP, generator by event creating < 32 Bytes
+  const SecretKey = '8dc628af4b9e4a5c'; // Secret Key for generating the signature, for an event - generate by event creating and search by Application ID < 32 Bytes
 
   const expectedSign = crypto
     .createHash('md5')
